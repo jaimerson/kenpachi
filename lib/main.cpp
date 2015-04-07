@@ -1,13 +1,13 @@
 #include<iostream>
-#include "kenpachi/engine.h"
+#include "kenpachi/game.h"
 
 using namespace std;
 
 int main(){
-  Kenpachi::Engine engine;
+  Kenpachi::Game *game = new Kenpachi::Game();
 
-  engine.setup();
-  engine.run();
+  game->setup();
+  game->run();
 
-  return engine.teardown();
+  return game->teardown();
 }
