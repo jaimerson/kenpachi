@@ -1,5 +1,5 @@
 dist/game: dist/*.o
-	g++ dist/*.o -o dist/game -lallegro
+	g++ $^ -o dist/game -lallegro
 
 dist/main.o: lib/main.cpp
 	g++ -c lib/main.cpp -o dist/main.o
@@ -16,7 +16,7 @@ dist/event_listener.o: lib/kenpachi/event_listener.h lib/kenpachi/event_listener
 dist/renderer.o: lib/kenpachi/renderer.h lib/kenpachi/renderer.cpp
 	g++ -c lib/kenpachi/renderer.cpp -o dist/renderer.o
 
-audio_player: lib/kenpachi/audio_player.h lib/kenpachi/audio_player.cpp
+dist/audio_player.o: lib/kenpachi/audio_player.h lib/kenpachi/audio_player.cpp
 	g++ -c lib/kenpachi/audio_player.cpp -o dist/audio_player.o
 
 run: dist/game
