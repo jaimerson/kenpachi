@@ -1,9 +1,10 @@
-#include<iostream>
 #include "engine.h"
 
 using namespace std;
 
 void Kenpachi::Engine::setup(){
+  srand(time(NULL));
+
   if(!al_init()){
     cout << "Error initializing allegro!" << endl;
     exit(1);
@@ -21,7 +22,7 @@ void Kenpachi::Engine::set_event_sources(){
   al_register_event_source(this->event_queue, al_get_timer_event_source(this->timer));
 }
 
-void Kenpachi::Engine::run(){
+template <class Renderer> void Kenpachi::Engine::run(Renderer *renderer){
   al_start_timer(this->timer);
   while(true){
     ALLEGRO_EVENT event;
@@ -36,7 +37,7 @@ void Kenpachi::Engine::run(){
 
     if(redraw && al_is_event_queue_empty(this->event_queue)) {
       redraw = false;
-      al_clear_to_color(al_map_rgb(150,0,0));
+      al_clear_to_color(al_map_rgb(rand() % 100,0,0));
       al_flip_display();
     }
   }

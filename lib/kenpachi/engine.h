@@ -1,6 +1,8 @@
 #ifndef KENPACHI_ENGINE
 #define KENPACHI_ENGINE
 
+#include<iostream>
+#include <time.h>
 #include<allegro5/allegro.h>
 #include "settings.h"
 
@@ -13,7 +15,7 @@ namespace Kenpachi{
       bool                redraw;
 
       void setup();
-      void run();
+      template <class Renderer> void run(Renderer*);
       int teardown();
 
     protected:

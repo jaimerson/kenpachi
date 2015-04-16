@@ -12,7 +12,7 @@ void Game::setup(){
 }
 
 void Game::run(){
-  return this->engine->run();
+  return this->engine->run(&(this->renderer));
 }
 
 int Game::teardown(){
