@@ -4,6 +4,8 @@
 #include "engine.h"
 
 namespace Kenpachi{
+  class Engine;
+
   class Renderer{
     public:
       Renderer(Engine*);

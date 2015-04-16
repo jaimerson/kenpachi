@@ -5,6 +5,7 @@
 #include <time.h>
 #include<allegro5/allegro.h>
 #include "settings.h"
+#include "renderer.h"
 
 namespace Kenpachi{
   class Engine{
@@ -15,7 +16,7 @@ namespace Kenpachi{
       bool                redraw;
 
       void setup();
-      template <class Renderer> void run(Renderer*);
+      void run(Renderer*);
       int teardown();
 
     protected:
