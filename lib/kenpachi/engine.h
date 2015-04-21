@@ -5,9 +5,10 @@
 #include <time.h>
 #include<allegro5/allegro.h>
 #include "settings.h"
-#include "renderer.h"
 
 namespace Kenpachi{
+  class Renderer;
+
   class Engine{
     public:
       ALLEGRO_DISPLAY     *display;

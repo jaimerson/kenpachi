@@ -22,7 +22,7 @@ void Kenpachi::Engine::set_event_sources(){
   al_register_event_source(this->event_queue, al_get_timer_event_source(this->timer));
 }
 
-template <class Renderer> void Kenpachi::Engine::run(Renderer *renderer){
+void Kenpachi::Engine::run(Renderer *renderer){
   al_start_timer(this->timer);
   while(true){
     ALLEGRO_EVENT event;
