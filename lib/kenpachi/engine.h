@@ -3,8 +3,11 @@
 
 #include<iostream>
 #include <time.h>
-#include<allegro5/allegro.h>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
 #include "settings.h"
+#include "renderer.h"
+#include "player.h"
 
 namespace Kenpachi{
   class Renderer;
@@ -17,7 +20,7 @@ namespace Kenpachi{
       bool                redraw;
 
       void setup();
-      void run(Renderer*);
+      void run(Renderer*, Player*);
       int teardown();
 
     protected:

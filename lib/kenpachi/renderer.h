@@ -1,16 +1,16 @@
 #ifndef KENPACHI_RENDERER
 #define KENPACHI_RENDERER
 
-#include "engine.h"
+#include <vector>
+#include "drawable.h"
 
 namespace Kenpachi{
-  class Engine;
-
   class Renderer{
     public:
-      Renderer(Engine*);
+      void render();
+      void add_to_render_queue(Drawable *drawable);
 
-      Engine *engine;
+      std::vector<Drawable*> objects;
   };
 };
 

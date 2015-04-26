@@ -5,6 +5,7 @@
 #include "renderer.h"
 #include "audio_player.h"
 #include "event_listener.h"
+#include "player.h"
 
 namespace Kenpachi{
   class Game{
@@ -18,6 +19,7 @@ namespace Kenpachi{
       Renderer *renderer;
       AudioPlayer *audio_player;
       EventListener *event_listener;
+      Drawable *player;
   };
 };
 
