@@ -14,16 +14,16 @@ Kenpachi::Player::Player(float x, float y){
 void Kenpachi::Player::handle_keyboard_event(int key_code){
   switch(key_code){
     case ALLEGRO_KEY_UP:
-      position_y--;
+      velocity_y--;
       break;
     case ALLEGRO_KEY_DOWN:
-      position_y++;
+      velocity_y++;
       break;
     case ALLEGRO_KEY_LEFT:
-      position_x--;
+      velocity_x--;
       break;
     case ALLEGRO_KEY_RIGHT:
-      position_x++;
+      velocity_x++;
       break;
   }
 }

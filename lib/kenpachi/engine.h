@@ -5,6 +5,7 @@
 #include <time.h>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
+#include <Box2D/Box2D.h>
 #include "settings.h"
 #include "renderer.h"
 #include "player.h"
