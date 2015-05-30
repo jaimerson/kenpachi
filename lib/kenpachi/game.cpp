@@ -11,6 +11,10 @@ Game::Game(){
 void Game::setup(){
   this->engine->setup();
   this->renderer->add_to_render_queue(this->player);
+  for(int i = 0; i < 10; i++){
+//  for(std::vector<GameObject*>::iterator it = enemies.begin(); it != enemies.end(); it++){
+    this->renderer->add_to_render_queue(new Kenpachi::Enemy(this->player));
+  }
 }
 
 void Game::run(){

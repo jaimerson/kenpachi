@@ -10,10 +10,12 @@ namespace Kenpachi{
   class Enemy : public GameObject{
     public:
       void draw();
-      Player *player;
-      Enemy();
+      void update();
+      GameObject *player;
+      ALLEGRO_COLOR color;
+
+      Enemy(GameObject *player);
       Enemy(float x, float y, Player *_player);
-      void follow_player();
   };
 }
 #endif

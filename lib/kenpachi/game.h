@@ -6,6 +6,8 @@
 #include "audio_player.h"
 #include "event_listener.h"
 #include "player.h"
+#include "enemy.h"
+#include <vector>
 
 namespace Kenpachi{
   class Game{

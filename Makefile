@@ -1,10 +1,10 @@
-dist/game: dist/main.o dist/game.o dist/engine.o dist/renderer.o dist/player.o dist/game_object.o
+dist/game: dist/main.o dist/enemy.o dist/game.o dist/engine.o dist/renderer.o dist/player.o dist/game_object.o
 	g++ $^ -o dist/game -lallegro -lallegro_primitives
 
 dist/main.o: lib/main.cpp
 	g++ -c lib/main.cpp -o dist/main.o
 	
-dist/game.o: lib/kenpachi/game.h lib/kenpachi/game.cpp
+dist/game.o: lib/kenpachi/game.h lib/kenpachi/game.cpp dist/enemy.o
 	g++ -c lib/kenpachi/game.cpp -o dist/game.o
 
 dist/engine.o: lib/kenpachi/engine.h lib/kenpachi/engine.cpp
@@ -15,6 +15,9 @@ dist/event_listener.o: lib/kenpachi/event_listener.h
 
 dist/renderer.o: lib/kenpachi/renderer.h lib/kenpachi/renderer.cpp
 	g++ -c lib/kenpachi/renderer.cpp -o dist/renderer.o
+
+dist/enemy.o: lib/kenpachi/enemy.h lib/kenpachi/enemy.cpp dist/player.o dist/game_object.o
+	g++ -c lib/kenpachi/enemy.cpp -o dist/enemy.o
 
 dist/player.o: lib/kenpachi/player.h lib/kenpachi/player.cpp dist/game_object.o
 	g++ -c lib/kenpachi/player.cpp -o dist/player.o
