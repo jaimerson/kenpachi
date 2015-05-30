@@ -10,6 +10,7 @@ namespace Kenpachi{
     public:
       void handle_keyboard_event(int);
       void draw();
+      void attack();
 
       Player();
       Player(float x, float y);
