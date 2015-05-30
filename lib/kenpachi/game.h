@@ -19,7 +19,7 @@ namespace Kenpachi{
       Renderer *renderer;
       AudioPlayer *audio_player;
       EventListener *event_listener;
-      Drawable *player;
+      GameObject *player;
   };
 };
 

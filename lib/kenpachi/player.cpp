@@ -14,20 +14,20 @@ Kenpachi::Player::Player(float x, float y){
 void Kenpachi::Player::handle_keyboard_event(int key_code){
   switch(key_code){
     case ALLEGRO_KEY_UP:
-      position_y--;
+      velocity_y--;
       break;
     case ALLEGRO_KEY_DOWN:
-      position_y++;
+      velocity_y++;
       break;
     case ALLEGRO_KEY_LEFT:
-      position_x--;
+      velocity_x--;
       break;
     case ALLEGRO_KEY_RIGHT:
-      position_x++;
+      velocity_x++;
       break;
   }
 }
 
 void Kenpachi::Player::draw(){
-  al_draw_circle(position_x, position_y, 10, al_map_rgb(230, 100, 200), 1);
+  al_draw_filled_circle(position_x, position_y, 10, al_map_rgb(0, 0, 0));
 }

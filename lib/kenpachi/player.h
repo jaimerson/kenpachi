@@ -1,13 +1,12 @@
 #ifndef KENPACHI_PLAYER
 #define KENPACHI_PLAYER
-#define VELOCITY 10
 
-#include "drawable.h"
+#include "game_object.h"
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 
 namespace Kenpachi{
-  class Player : public Drawable{
+  class Player : public GameObject{
     public:
       void handle_keyboard_event(int);
       void draw();

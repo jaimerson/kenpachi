@@ -2,15 +2,15 @@
 #define KENPACHI_RENDERER
 
 #include <vector>
-#include "drawable.h"
+#include "game_object.h"
 
 namespace Kenpachi{
   class Renderer{
     public:
       void render();
-      void add_to_render_queue(Drawable *drawable);
+      void add_to_render_queue(GameObject *object);
 
-      std::vector<Drawable*> objects;
+      std::vector<GameObject*> objects;
   };
 };
 
