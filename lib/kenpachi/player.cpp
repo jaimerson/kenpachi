@@ -29,5 +29,5 @@ void Kenpachi::Player::handle_keyboard_event(int key_code){
 }
 
 void Kenpachi::Player::draw(){
-  al_draw_circle(position_x, position_y, 10, al_map_rgb(230, 100, 200), 1);
+  al_draw_filled_circle(position_x, position_y, 10, al_map_rgb(0, 0, 0));
 }
