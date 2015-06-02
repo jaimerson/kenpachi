@@ -2,7 +2,7 @@
 #include "renderer.h"
 
 void Kenpachi::Renderer::render(){
-  al_clear_to_color(al_map_rgb(100,100,200));
+  al_clear_to_color(al_map_rgb(100,100,100));
   for(std::vector<GameObject*>::iterator it = objects.begin(); it != objects.end(); it++){
     (*it)->update();
     (*it)->draw();

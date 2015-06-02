@@ -2,28 +2,30 @@
 #include "player.h"
 
 Kenpachi::Player::Player(){
-  position_x = (float) 0;
-  position_y = (float) 0;
+  this->position_x = (float) 0;
+  this->position_y = (float) 0;
+  this->max_velocity = 3;
 }
 
 Kenpachi::Player::Player(float x, float y){
-  position_x = x;
-  position_y = y;
+  this->position_x = x;
+  this->position_y = y;
+  this->max_velocity = 10;
 }
 
 void Kenpachi::Player::handle_keyboard_event(int key_code){
   switch(key_code){
     case ALLEGRO_KEY_UP:
-      velocity_y--;
+      decelerate_y(1);
       break;
     case ALLEGRO_KEY_DOWN:
-      velocity_y++;
+      accelerate_y(1);
       break;
     case ALLEGRO_KEY_LEFT:
-      velocity_x--;
+      decelerate_x(1);
       break;
     case ALLEGRO_KEY_RIGHT:
-      velocity_x++;
+      accelerate_x(1);
       break;
   }
 }
