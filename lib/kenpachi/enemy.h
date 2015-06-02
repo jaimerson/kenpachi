@@ -8,6 +8,7 @@
 
 namespace Kenpachi{
   class Enemy : public GameObject{
+    void check_for_collision();
     public:
       void draw();
       void update();
