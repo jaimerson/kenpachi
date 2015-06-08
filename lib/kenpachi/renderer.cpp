@@ -11,4 +11,5 @@ void Kenpachi::Renderer::render(){
 
 void Kenpachi::Renderer::add_to_render_queue(GameObject *object){
   objects.push_back(object);
+  object->queue = &(this->objects);
 }
